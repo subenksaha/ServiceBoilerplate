@@ -1,7 +1,7 @@
 {
-  "name": "persons",
+  "name": "service",
   "version": "0.0.1",
-  "description": "",
+  "description": "Service boilerplate",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
