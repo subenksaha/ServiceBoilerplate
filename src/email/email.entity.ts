@@ -1,4 +1,4 @@
-import { ObjectType, Field, ID } from '@nestjs/graphql';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { User } from '../user/user.entity';
 
 @ObjectType()
@@ -18,7 +18,6 @@ export class Email {
      * and save encrypted string like password
      * @null means verified
      */
-    @Field(() => String, { nullable: true })
     verification: string;
 
     @Field(() => User)

@@ -1,5 +1,7 @@
-import { ObjectType, Field, ID } from '@nestjs/graphql';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { User } from '../user/user.entity';
+import { JobLocation } from './location.entity';
+import { JobType } from './type.enum';
 
 @ObjectType()
 export class Job {
@@ -11,6 +13,15 @@ export class Job {
 
     @Field(() => String)
     description: string;
+
+    @Field(() => JobType)
+    type: JobType;
+
+    @Field(() => JobLocation, { nullable: true })
+    location?: JobLocation;
+
+    @Field(() => String)
+    schedule: string;
 
     @Field(() => User)
     owner: User;

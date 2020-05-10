@@ -1,6 +1,7 @@
-import { Field, ID } from '@nestjs/graphql';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
 import { ActivityType } from './type.enum';
 
+@ObjectType()
 export class Activity {
     @Field(() => ID)
     id: string;
@@ -18,7 +19,4 @@ export class Activity {
 
     @Field(() => String)
     time: Date;
-
-    @Field()
-    extras: any;
 }

@@ -8,6 +8,9 @@ export class Session {
     @Field(() => Date)
     started: Date;
 
+    @Field(() => Boolean)
+    isInterview: boolean;
+
     @Field(() => Date)
     ended: Date;
 }

@@ -10,6 +10,9 @@ export class Work {
     @Field(() => String)
     position: string;
 
+    @Field(() => String, { nullable: true })
+    employeeId: string;
+
     @Field(() => Date)
     from: Date;
 
